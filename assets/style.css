@@ -168,3 +168,15 @@ footer.site .bottom{margin-top:30px;padding-top:20px;border-top:1px solid var(--
 .breadcrumb a{color:var(--sub)}
 .notice{background:#fff8e6;border:1px solid #f2d999;border-radius:12px;padding:14px 18px;
   font-size:14.5px;color:#6b5a2a;margin:0 0 20px}
+
+/* ---------- article images ---------- */
+.posthero{margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--stroke);
+  box-shadow:0 20px 45px -24px rgba(15,23,42,.4)}
+.posthero img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+article.post figure.postfig{margin:30px auto;max-width:430px;text-align:center}
+article.post figure.postfig img{width:100%;border-radius:16px;border:1px solid var(--stroke);
+  box-shadow:0 20px 44px -22px rgba(15,23,42,.42)}
+article.post figure.postfig figcaption{color:var(--sub2);font-size:13px;margin-top:10px;line-height:1.5}
+.card .thumb{margin:-20px -20px 14px;overflow:hidden;border-radius:13px 13px 0 0;background:var(--card2)}
+.card .thumb img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+@media(max-width:640px){article.post figure.postfig{max-width:100%}}
