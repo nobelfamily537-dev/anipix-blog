@@ -29,7 +29,7 @@
     <a href="../about.html">About</a>
     <a href="../contact.html">Contact</a>
   </nav>
-</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../anime.html">Anime</a></p><article class="post"><h1>Naruto vs Boruto: Which Characters Make Better Wallpapers?</h1><div class="post-meta"><span class="chip">Anime</span><span>5 October 2026</span><i></i><span>6 min read</span></div><div class="posthero"><img src="../assets/img/naruto-boruto-wallpapers-guide-cover.jpg" alt="naruto boruto wallpapers guide cover" loading="lazy"></div><p>Naruto and Boruto are set in the same world but drawn in two very different visual languages, and that difference shows up the moment you put them side by side on a phone screen. This guide compares the two eras directly, looking at Naruto, Sasuke, Kakashi, Itachi and Sarada, and explaining how the older linework and colouring sit next to the newer style. By the end you will know which era's art crops more cleanly to a portrait phone and which characters are worth hunting for in each.</p>
+</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../anime.html">Anime</a></p><article class="post"><h1>Naruto vs Boruto: Which Characters Make Better Wallpapers?</h1><div class="post-meta"><span class="chip">Anime</span><span>5 October 2026</span><i></i><span>6 min read</span></div><div class="sharebar"><span class="sharelabel">Share</span><button class="sbtn" type="button" onclick="sharePost()">Share this article</button><button class="sbtn" type="button" onclick="copyLink()">Copy link</button></div><div class="posthero"><img src="../assets/img/naruto-boruto-wallpapers-guide-cover.jpg" alt="naruto boruto wallpapers guide cover" loading="lazy"></div><p>Naruto and Boruto are set in the same world but drawn in two very different visual languages, and that difference shows up the moment you put them side by side on a phone screen. This guide compares the two eras directly, looking at Naruto, Sasuke, Kakashi, Itachi and Sarada, and explaining how the older linework and colouring sit next to the newer style. By the end you will know which era's art crops more cleanly to a portrait phone and which characters are worth hunting for in each.</p>
 
 <h2>Two eras, two visual languages</h2>
 <p>The Naruto anime began in the early 2000s, and its look was shaped by the production tools of the time. Colours are flatter and a little softer, the digital compositing is gentler, and the linework is thinner and slightly rougher. Shippuden tightens this up, pushing contrast higher and darkening the overall palette, but it still belongs to the same family: warm earth tones, muted greens and browns, and a lot of open sky.</p>
@@ -114,5 +114,20 @@
   <div class="bottom">&copy; <span id="yr"></span> AniPix Blog. All artwork belongs to its original creators.
   This site is not affiliated with any studio, publisher or game developer.</div>
 </div></footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script></body>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script><div id="shareToast"></div>
+<script>
+function shareToast(m){var t=document.getElementById('shareToast');if(!t)return;
+ t.textContent=m;t.classList.add('on');clearTimeout(window._st);
+ window._st=setTimeout(function(){t.classList.remove('on');},2200);}
+function sharePost(t,u){t=t||document.title;u=u||location.href;
+ if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+function copyLink(u){u=u||location.href;
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+</script>
+</body>
 </html>

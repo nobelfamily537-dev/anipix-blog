@@ -29,7 +29,7 @@
     <a href="../about.html">About</a>
     <a href="../contact.html">Contact</a>
   </nav>
-</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../guides.html">Guides</a></p><article class="post"><h1>Why 1080×1920 Matters: An Anime Wallpaper Resolution Guide</h1><div class="post-meta"><span class="chip">Guides</span><span>31 August 2026</span><i></i><span>5 min read</span></div><div class="posthero"><img src="../assets/img/anime-wallpaper-resolution-guide-cover.jpg" alt="anime wallpaper resolution guide cover" loading="lazy"></div><p>This guide explains how phone screen resolution and aspect ratio affect how an anime wallpaper looks once it is set. You will learn how to find your own screen's exact pixel size, why a portrait crop almost always beats a stretched landscape image, and how to check whether a wallpaper will look sharp before you commit to it. The numbers below apply to nearly every phone sold in the last five years.</p>
+</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../guides.html">Guides</a></p><article class="post"><h1>Why 1080×1920 Matters: An Anime Wallpaper Resolution Guide</h1><div class="post-meta"><span class="chip">Guides</span><span>31 August 2026</span><i></i><span>5 min read</span></div><div class="sharebar"><span class="sharelabel">Share</span><button class="sbtn" type="button" onclick="sharePost()">Share this article</button><button class="sbtn" type="button" onclick="copyLink()">Copy link</button></div><div class="posthero"><img src="../assets/img/anime-wallpaper-resolution-guide-cover.jpg" alt="anime wallpaper resolution guide cover" loading="lazy"></div><p>This guide explains how phone screen resolution and aspect ratio affect how an anime wallpaper looks once it is set. You will learn how to find your own screen's exact pixel size, why a portrait crop almost always beats a stretched landscape image, and how to check whether a wallpaper will look sharp before you commit to it. The numbers below apply to nearly every phone sold in the last five years.</p>
 
 <h2>Finding your phone's real resolution</h2>
 <p>The number you need is the screen's pixel dimensions in portrait, written as width by height. Almost all modern phones are 1080 pixels wide, but the height varies a lot.</p>
@@ -123,5 +123,20 @@
   <div class="bottom">&copy; <span id="yr"></span> AniPix Blog. All artwork belongs to its original creators.
   This site is not affiliated with any studio, publisher or game developer.</div>
 </div></footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script></body>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script><div id="shareToast"></div>
+<script>
+function shareToast(m){var t=document.getElementById('shareToast');if(!t)return;
+ t.textContent=m;t.classList.add('on');clearTimeout(window._st);
+ window._st=setTimeout(function(){t.classList.remove('on');},2200);}
+function sharePost(t,u){t=t||document.title;u=u||location.href;
+ if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+function copyLink(u){u=u||location.href;
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+</script>
+</body>
 </html>

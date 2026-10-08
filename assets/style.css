@@ -178,3 +178,15 @@ article.post figure.postfig figcaption{color:var(--sub2);font-size:13px;margin-t
 .card .thumb{margin:-20px -20px 14px;overflow:hidden;border-radius:13px 13px 0 0;background:var(--card2)}
 .card .thumb img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
 @media(max-width:640px){article.post figure.postfig{max-width:100%}}
+
+/* ---------- share ---------- */
+.sharebar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:24px 0;
+  padding:14px 16px;background:var(--card2);border:1px solid var(--stroke);border-radius:14px}
+.sharebar .sharelabel{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sub2)}
+.sbtn{font:inherit;font-size:14px;font-weight:600;color:var(--text);background:#fff;
+  border:1px solid var(--stroke2);border-radius:10px;padding:9px 16px;cursor:pointer;transition:.18s}
+.sbtn:hover{border-color:var(--accent);color:var(--accent)}
+#shareToast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
+  background:#0f172a;color:#fff;font-size:14px;padding:11px 18px;border-radius:12px;
+  opacity:0;pointer-events:none;transition:.25s;z-index:99}
+#shareToast.on{opacity:1;transform:translateX(-50%) translateY(0)}

@@ -29,7 +29,7 @@
     <a href="../about.html">About</a>
     <a href="../contact.html">Contact</a>
   </nav>
-</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../anime.html">Anime</a></p><article class="post"><h1>My Hero Academia Wallpapers: From Deku to All Might</h1><div class="post-meta"><span class="chip">Anime</span><span>7 October 2026</span><i></i><span>6 min read</span></div><div class="posthero"><img src="../assets/img/my-hero-academia-wallpapers-guide-cover.jpg" alt="my hero academia wallpapers guide cover" loading="lazy"></div><p>My Hero Academia is one of the boldest-looking anime on television, and that boldness is exactly what makes it work as a phone wallpaper. This guide looks at how Deku's design changes from arc to arc, then works through Bakugo, Todoroki, All Might and Shigaraki, with notes on how their primary-colour palettes behave as a lock screen. You will finish with a clear sense of which characters give you a clean, readable background and which ones are better saved for a busy home screen.</p>
+</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../anime.html">Anime</a></p><article class="post"><h1>My Hero Academia Wallpapers: From Deku to All Might</h1><div class="post-meta"><span class="chip">Anime</span><span>7 October 2026</span><i></i><span>6 min read</span></div><div class="sharebar"><span class="sharelabel">Share</span><button class="sbtn" type="button" onclick="sharePost()">Share this article</button><button class="sbtn" type="button" onclick="copyLink()">Copy link</button></div><div class="posthero"><img src="../assets/img/my-hero-academia-wallpapers-guide-cover.jpg" alt="my hero academia wallpapers guide cover" loading="lazy"></div><p>My Hero Academia is one of the boldest-looking anime on television, and that boldness is exactly what makes it work as a phone wallpaper. This guide looks at how Deku's design changes from arc to arc, then works through Bakugo, Todoroki, All Might and Shigaraki, with notes on how their primary-colour palettes behave as a lock screen. You will finish with a clear sense of which characters give you a clean, readable background and which ones are better saved for a busy home screen.</p>
 
 <h2>What makes My Hero Academia art so bold</h2>
 <p>The series leans hard on primary colours and heavy outlines. Characters are built from a small number of strong hues, red, blue, yellow, orange and green, and the shading is deliberately graphic rather than realistic. Costumes are blocky and symmetrical, which gives each character a silhouette you can recognise from across a room. That combination is close to ideal for a phone wallpaper, because a strong silhouette and a simple palette survive being scaled down and partly covered by icons.</p>
@@ -103,5 +103,20 @@
   <div class="bottom">&copy; <span id="yr"></span> AniPix Blog. All artwork belongs to its original creators.
   This site is not affiliated with any studio, publisher or game developer.</div>
 </div></footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script></body>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script><div id="shareToast"></div>
+<script>
+function shareToast(m){var t=document.getElementById('shareToast');if(!t)return;
+ t.textContent=m;t.classList.add('on');clearTimeout(window._st);
+ window._st=setTimeout(function(){t.classList.remove('on');},2200);}
+function sharePost(t,u){t=t||document.title;u=u||location.href;
+ if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+function copyLink(u){u=u||location.href;
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+</script>
+</body>
 </html>

@@ -29,7 +29,7 @@
     <a href="../about.html">About</a>
     <a href="../contact.html">Contact</a>
   </nav>
-</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../games.html">Games</a></p><article class="post"><h1>Wuthering Waves Wallpapers: Hsin, Carlotta and the Rest</h1><div class="post-meta"><span class="chip">Games</span><span>7 September 2026</span><i></i><span>6 min read</span></div><div class="posthero"><img src="../assets/img/wuthering-waves-wallpapers-guide-cover.jpg" alt="wuthering waves wallpapers guide cover" loading="lazy"></div><p>Wuthering Waves has a distinctive visual identity, and its official character art is unusually well suited to portrait phone screens. This guide looks at the game's art direction and then works through Hsin, Carlotta, Jinhsi, Camellya and the Shorekeeper, explaining the palette each one uses and why the official illustrations crop so cleanly. You will finish knowing which characters to reach for and how to get the most out of their art on a home screen.</p>
+</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../games.html">Games</a></p><article class="post"><h1>Wuthering Waves Wallpapers: Hsin, Carlotta and the Rest</h1><div class="post-meta"><span class="chip">Games</span><span>7 September 2026</span><i></i><span>6 min read</span></div><div class="sharebar"><span class="sharelabel">Share</span><button class="sbtn" type="button" onclick="sharePost()">Share this article</button><button class="sbtn" type="button" onclick="copyLink()">Copy link</button></div><div class="posthero"><img src="../assets/img/wuthering-waves-wallpapers-guide-cover.jpg" alt="wuthering waves wallpapers guide cover" loading="lazy"></div><p>Wuthering Waves has a distinctive visual identity, and its official character art is unusually well suited to portrait phone screens. This guide looks at the game's art direction and then works through Hsin, Carlotta, Jinhsi, Camellya and the Shorekeeper, explaining the palette each one uses and why the official illustrations crop so cleanly. You will finish knowing which characters to reach for and how to get the most out of their art on a home screen.</p>
 
 <h2>The game's high-contrast art direction</h2>
 <p>Wuthering Waves sits between science fiction and fantasy, and its art direction leans into contrast. Characters are drawn with sharp, angular silhouettes, and their designs often pair a dark base with bright, saturated accents, so a figure reads clearly even against a busy background. Where many games keep their palettes soft and even, Wuthering Waves deliberately pushes the lights brighter and the darks deeper.</p>
@@ -104,5 +104,20 @@
   <div class="bottom">&copy; <span id="yr"></span> AniPix Blog. All artwork belongs to its original creators.
   This site is not affiliated with any studio, publisher or game developer.</div>
 </div></footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script></body>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script><div id="shareToast"></div>
+<script>
+function shareToast(m){var t=document.getElementById('shareToast');if(!t)return;
+ t.textContent=m;t.classList.add('on');clearTimeout(window._st);
+ window._st=setTimeout(function(){t.classList.remove('on');},2200);}
+function sharePost(t,u){t=t||document.title;u=u||location.href;
+ if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+function copyLink(u){u=u||location.href;
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+</script>
+</body>
 </html>

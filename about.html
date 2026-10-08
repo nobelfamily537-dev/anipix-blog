@@ -58,7 +58,7 @@ these guides started, as notes about what actually works on a phone screen.</p>
 <h2>Corrections</h2>
 <p>If something here is wrong, tell us. Email <a href="mailto:animeloverclipedits@gmail.com">animeloverclipedits@gmail.com</a> with the article link and
 the correction, and we will fix it and note the change.</p>
-</div></main><footer class="site"><div class="wrap">
+</div></main><div class="sharebar"><span class="sharelabel">Share</span><button class="sbtn" type="button" onclick="sharePost()">Share this page</button><button class="sbtn" type="button" onclick="copyLink()">Copy link</button></div><footer class="site"><div class="wrap">
   <div class="cols">
     <div>
       <h4>About AniPix Blog</h4>
@@ -87,5 +87,20 @@ the correction, and we will fix it and note the change.</p>
   <div class="bottom">&copy; <span id="yr"></span> AniPix Blog. All artwork belongs to its original creators.
   This site is not affiliated with any studio, publisher or game developer.</div>
 </div></footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script></body>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script><div id="shareToast"></div>
+<script>
+function shareToast(m){var t=document.getElementById('shareToast');if(!t)return;
+ t.textContent=m;t.classList.add('on');clearTimeout(window._st);
+ window._st=setTimeout(function(){t.classList.remove('on');},2200);}
+function sharePost(t,u){t=t||document.title;u=u||location.href;
+ if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+function copyLink(u){u=u||location.href;
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+</script>
+</body>
 </html>

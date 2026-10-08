@@ -29,7 +29,7 @@
     <a href="../about.html">About</a>
     <a href="../contact.html">Contact</a>
   </nav>
-</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../games.html">Games</a></p><article class="post"><h1>10 Best Anime Games on Android in 2026</h1><div class="post-meta"><span class="chip">Games</span><span>29 September 2026</span><i></i><span>5 min read</span></div><div class="posthero"><img src="../assets/img/best-anime-games-android-cover.jpg" alt="best anime games android cover" loading="lazy"></div><p>There are more anime-style games on Android than anyone can reasonably try, so this list focuses on ten that are worth a look, with a plain reason to play each one, a rough idea of how much space it takes and whether it needs a constant internet connection. The aim is to help you decide what to install before you commit your storage, not to crown a single winner.</p>
+</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../games.html">Games</a></p><article class="post"><h1>10 Best Anime Games on Android in 2026</h1><div class="post-meta"><span class="chip">Games</span><span>29 September 2026</span><i></i><span>5 min read</span></div><div class="sharebar"><span class="sharelabel">Share</span><button class="sbtn" type="button" onclick="sharePost()">Share this article</button><button class="sbtn" type="button" onclick="copyLink()">Copy link</button></div><div class="posthero"><img src="../assets/img/best-anime-games-android-cover.jpg" alt="best anime games android cover" loading="lazy"></div><p>There are more anime-style games on Android than anyone can reasonably try, so this list focuses on ten that are worth a look, with a plain reason to play each one, a rough idea of how much space it takes and whether it needs a constant internet connection. The aim is to help you decide what to install before you commit your storage, not to crown a single winner.</p>
 
 <h2>How to read this list</h2>
 
@@ -133,5 +133,20 @@
   <div class="bottom">&copy; <span id="yr"></span> AniPix Blog. All artwork belongs to its original creators.
   This site is not affiliated with any studio, publisher or game developer.</div>
 </div></footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script></body>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script><div id="shareToast"></div>
+<script>
+function shareToast(m){var t=document.getElementById('shareToast');if(!t)return;
+ t.textContent=m;t.classList.add('on');clearTimeout(window._st);
+ window._st=setTimeout(function(){t.classList.remove('on');},2200);}
+function sharePost(t,u){t=t||document.title;u=u||location.href;
+ if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+function copyLink(u){u=u||location.href;
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+</script>
+</body>
 </html>

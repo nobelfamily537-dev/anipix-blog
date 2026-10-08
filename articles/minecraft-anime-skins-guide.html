@@ -29,7 +29,7 @@
     <a href="../about.html">About</a>
     <a href="../contact.html">Contact</a>
   </nav>
-</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../games.html">Games</a></p><article class="post"><h1>Minecraft Anime Skins: A Practical Guide</h1><div class="post-meta"><span class="chip">Games</span><span>4 October 2026</span><i></i><span>6 min read</span></div><div class="posthero"><img src="../assets/img/minecraft-anime-skins-guide-cover.jpg" alt="minecraft anime skins guide cover" loading="lazy"></div><p>Anime skins are one of the most popular ways to customise a Minecraft character, but the process trips people up because Java and Bedrock handle skins differently. This guide explains how skins work, where to find anime designs, how to apply them on both versions of the game, how to make your own in a skin editor, and the mistakes that leave a character looking broken or upside down.</p>
+</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../games.html">Games</a></p><article class="post"><h1>Minecraft Anime Skins: A Practical Guide</h1><div class="post-meta"><span class="chip">Games</span><span>4 October 2026</span><i></i><span>6 min read</span></div><div class="sharebar"><span class="sharelabel">Share</span><button class="sbtn" type="button" onclick="sharePost()">Share this article</button><button class="sbtn" type="button" onclick="copyLink()">Copy link</button></div><div class="posthero"><img src="../assets/img/minecraft-anime-skins-guide-cover.jpg" alt="minecraft anime skins guide cover" loading="lazy"></div><p>Anime skins are one of the most popular ways to customise a Minecraft character, but the process trips people up because Java and Bedrock handle skins differently. This guide explains how skins work, where to find anime designs, how to apply them on both versions of the game, how to make your own in a skin editor, and the mistakes that leave a character looking broken or upside down.</p>
 
 <h2>How Minecraft skins actually work</h2>
 
@@ -127,5 +127,20 @@
   <div class="bottom">&copy; <span id="yr"></span> AniPix Blog. All artwork belongs to its original creators.
   This site is not affiliated with any studio, publisher or game developer.</div>
 </div></footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script></body>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script><div id="shareToast"></div>
+<script>
+function shareToast(m){var t=document.getElementById('shareToast');if(!t)return;
+ t.textContent=m;t.classList.add('on');clearTimeout(window._st);
+ window._st=setTimeout(function(){t.classList.remove('on');},2200);}
+function sharePost(t,u){t=t||document.title;u=u||location.href;
+ if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+function copyLink(u){u=u||location.href;
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+</script>
+</body>
 </html>

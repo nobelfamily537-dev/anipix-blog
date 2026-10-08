@@ -29,7 +29,7 @@
     <a href="../about.html">About</a>
     <a href="../contact.html">Contact</a>
   </nav>
-</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../anime.html">Anime</a></p><article class="post"><h1>Jujutsu Kaisen Wallpapers: The Best Characters for Your Phone</h1><div class="post-meta"><span class="chip">Anime</span><span>12 August 2026</span><i></i><span>7 min read</span></div><div class="posthero"><img src="../assets/img/jujutsu-kaisen-wallpapers-guide-cover.jpg" alt="jujutsu kaisen wallpapers guide cover" loading="lazy"></div><p>A phone wallpaper has to survive being glanced at dozens of times a day, so it needs to read clearly at a small size and in a hurry. This guide works through the main Jujutsu Kaisen cast — Gojo, Sukuna, Yuji, Megumi, Nobara and Toji — and explains what each one brings to a portrait screen: the colour palette, the silhouette, and the crop that keeps their face in frame. By the end you will know which art suits a lock screen, which suits a home screen, and why the same picture can look superb in one place and awkward in the other.</p>
+</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../anime.html">Anime</a></p><article class="post"><h1>Jujutsu Kaisen Wallpapers: The Best Characters for Your Phone</h1><div class="post-meta"><span class="chip">Anime</span><span>12 August 2026</span><i></i><span>7 min read</span></div><div class="sharebar"><span class="sharelabel">Share</span><button class="sbtn" type="button" onclick="sharePost()">Share this article</button><button class="sbtn" type="button" onclick="copyLink()">Copy link</button></div><div class="posthero"><img src="../assets/img/jujutsu-kaisen-wallpapers-guide-cover.jpg" alt="jujutsu kaisen wallpapers guide cover" loading="lazy"></div><p>A phone wallpaper has to survive being glanced at dozens of times a day, so it needs to read clearly at a small size and in a hurry. This guide works through the main Jujutsu Kaisen cast — Gojo, Sukuna, Yuji, Megumi, Nobara and Toji — and explains what each one brings to a portrait screen: the colour palette, the silhouette, and the crop that keeps their face in frame. By the end you will know which art suits a lock screen, which suits a home screen, and why the same picture can look superb in one place and awkward in the other.</p>
 
 <h2>Why Jujutsu Kaisen art survives on a small screen</h2>
 
@@ -125,5 +125,20 @@
   <div class="bottom">&copy; <span id="yr"></span> AniPix Blog. All artwork belongs to its original creators.
   This site is not affiliated with any studio, publisher or game developer.</div>
 </div></footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script></body>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script><div id="shareToast"></div>
+<script>
+function shareToast(m){var t=document.getElementById('shareToast');if(!t)return;
+ t.textContent=m;t.classList.add('on');clearTimeout(window._st);
+ window._st=setTimeout(function(){t.classList.remove('on');},2200);}
+function sharePost(t,u){t=t||document.title;u=u||location.href;
+ if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+function copyLink(u){u=u||location.href;
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+</script>
+</body>
 </html>

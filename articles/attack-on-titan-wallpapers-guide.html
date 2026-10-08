@@ -29,7 +29,7 @@
     <a href="../about.html">About</a>
     <a href="../contact.html">Contact</a>
   </nav>
-</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../anime.html">Anime</a></p><article class="post"><h1>Attack on Titan Wallpapers: The Most Iconic Scenes and How to Use Them</h1><div class="post-meta"><span class="chip">Anime</span><span>25 September 2026</span><i></i><span>6 min read</span></div><div class="posthero"><img src="../assets/img/attack-on-titan-wallpapers-guide-cover.jpg" alt="attack on titan wallpapers guide cover" loading="lazy"></div><p>Attack on Titan looks different from most anime wallpapers, and that difference is exactly what makes it work. This guide covers the most recognisable scenes and characters — Eren, Levi, Mikasa, the Walls and the Rumbling — explains the muted palette the series uses, and shows which moments stay readable at small size. It also walks through the cropping habits that stop a face from being sliced off by the clock or the swipe bar.</p>
+</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../anime.html">Anime</a></p><article class="post"><h1>Attack on Titan Wallpapers: The Most Iconic Scenes and How to Use Them</h1><div class="post-meta"><span class="chip">Anime</span><span>25 September 2026</span><i></i><span>6 min read</span></div><div class="sharebar"><span class="sharelabel">Share</span><button class="sbtn" type="button" onclick="sharePost()">Share this article</button><button class="sbtn" type="button" onclick="copyLink()">Copy link</button></div><div class="posthero"><img src="../assets/img/attack-on-titan-wallpapers-guide-cover.jpg" alt="attack on titan wallpapers guide cover" loading="lazy"></div><p>Attack on Titan looks different from most anime wallpapers, and that difference is exactly what makes it work. This guide covers the most recognisable scenes and characters — Eren, Levi, Mikasa, the Walls and the Rumbling — explains the muted palette the series uses, and shows which moments stay readable at small size. It also walks through the cropping habits that stop a face from being sliced off by the clock or the swipe bar.</p>
 
 <h2>Why the muted palette works on a phone</h2>
 
@@ -107,5 +107,20 @@
   <div class="bottom">&copy; <span id="yr"></span> AniPix Blog. All artwork belongs to its original creators.
   This site is not affiliated with any studio, publisher or game developer.</div>
 </div></footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script></body>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script><div id="shareToast"></div>
+<script>
+function shareToast(m){var t=document.getElementById('shareToast');if(!t)return;
+ t.textContent=m;t.classList.add('on');clearTimeout(window._st);
+ window._st=setTimeout(function(){t.classList.remove('on');},2200);}
+function sharePost(t,u){t=t||document.title;u=u||location.href;
+ if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+function copyLink(u){u=u||location.href;
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+</script>
+</body>
 </html>

@@ -29,7 +29,7 @@
     <a href="../about.html">About</a>
     <a href="../contact.html">Contact</a>
   </nav>
-</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../games.html">Games</a></p><article class="post"><h1>Free Fire Wallpapers: Characters, Skins and What Actually Looks Good</h1><div class="post-meta"><span class="chip">Games</span><span>27 August 2026</span><i></i><span>7 min read</span></div><div class="posthero"><img src="../assets/img/free-fire-wallpapers-guide-cover.jpg" alt="free fire wallpapers guide cover" loading="lazy"></div><p>A good Free Fire wallpaper is not simply a screenshot of your favourite character standing in the lobby. This guide looks at which Free Fire characters and elite bundles actually hold up as phone wallpapers, why so many in-game captures end up looking cluttered, and how to get a cleaner result without any editing skills. If you have ever set a game screenshot as your lock screen and been disappointed an hour later, the reasons are worth understanding.</p>
+</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../games.html">Games</a></p><article class="post"><h1>Free Fire Wallpapers: Characters, Skins and What Actually Looks Good</h1><div class="post-meta"><span class="chip">Games</span><span>27 August 2026</span><i></i><span>7 min read</span></div><div class="sharebar"><span class="sharelabel">Share</span><button class="sbtn" type="button" onclick="sharePost()">Share this article</button><button class="sbtn" type="button" onclick="copyLink()">Copy link</button></div><div class="posthero"><img src="../assets/img/free-fire-wallpapers-guide-cover.jpg" alt="free fire wallpapers guide cover" loading="lazy"></div><p>A good Free Fire wallpaper is not simply a screenshot of your favourite character standing in the lobby. This guide looks at which Free Fire characters and elite bundles actually hold up as phone wallpapers, why so many in-game captures end up looking cluttered, and how to get a cleaner result without any editing skills. If you have ever set a game screenshot as your lock screen and been disappointed an hour later, the reasons are worth understanding.</p>
 
 <h2>Why in-game screenshots rarely work as wallpapers</h2>
 
@@ -128,5 +128,20 @@
   <div class="bottom">&copy; <span id="yr"></span> AniPix Blog. All artwork belongs to its original creators.
   This site is not affiliated with any studio, publisher or game developer.</div>
 </div></footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script></body>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script><div id="shareToast"></div>
+<script>
+function shareToast(m){var t=document.getElementById('shareToast');if(!t)return;
+ t.textContent=m;t.classList.add('on');clearTimeout(window._st);
+ window._st=setTimeout(function(){t.classList.remove('on');},2200);}
+function sharePost(t,u){t=t||document.title;u=u||location.href;
+ if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+function copyLink(u){u=u||location.href;
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+</script>
+</body>
 </html>

@@ -29,7 +29,7 @@
     <a href="../about.html">About</a>
     <a href="../contact.html">Contact</a>
   </nav>
-</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../guides.html">Guides</a></p><article class="post"><h1>How to Set a Live Wallpaper on Android (Step by Step)</h1><div class="post-meta"><span class="chip">Guides</span><span>19 August 2026</span><i></i><span>5 min read</span></div><div class="posthero"><img src="../assets/img/how-to-set-live-wallpaper-android-cover.jpg" alt="how to set live wallpaper android cover" loading="lazy"></div><p>This guide walks you through setting a live wallpaper on any modern Android phone, including the differences between Samsung, Xiaomi, Pixel and OnePlus software. It also covers how live wallpapers affect battery life and what to do if your phone does not seem to offer the option at all. Every step below uses the actual menu names you will see on screen.</p>
+</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../guides.html">Guides</a></p><article class="post"><h1>How to Set a Live Wallpaper on Android (Step by Step)</h1><div class="post-meta"><span class="chip">Guides</span><span>19 August 2026</span><i></i><span>5 min read</span></div><div class="sharebar"><span class="sharelabel">Share</span><button class="sbtn" type="button" onclick="sharePost()">Share this article</button><button class="sbtn" type="button" onclick="copyLink()">Copy link</button></div><div class="posthero"><img src="../assets/img/how-to-set-live-wallpaper-android-cover.jpg" alt="how to set live wallpaper android cover" loading="lazy"></div><p>This guide walks you through setting a live wallpaper on any modern Android phone, including the differences between Samsung, Xiaomi, Pixel and OnePlus software. It also covers how live wallpapers affect battery life and what to do if your phone does not seem to offer the option at all. Every step below uses the actual menu names you will see on screen.</p>
 
 <h2>What a live wallpaper actually is</h2>
 <p>A live wallpaper is not a video file you set like a photo. On Android it is a small application that draws to the home screen continuously, using the system's wallpaper service. That is why live wallpapers appear in a different place from ordinary photos: they are installed and selected as apps, not chosen from your gallery.</p>
@@ -119,5 +119,20 @@
   <div class="bottom">&copy; <span id="yr"></span> AniPix Blog. All artwork belongs to its original creators.
   This site is not affiliated with any studio, publisher or game developer.</div>
 </div></footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script></body>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script><div id="shareToast"></div>
+<script>
+function shareToast(m){var t=document.getElementById('shareToast');if(!t)return;
+ t.textContent=m;t.classList.add('on');clearTimeout(window._st);
+ window._st=setTimeout(function(){t.classList.remove('on');},2200);}
+function sharePost(t,u){t=t||document.title;u=u||location.href;
+ if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+function copyLink(u){u=u||location.href;
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+</script>
+</body>
 </html>

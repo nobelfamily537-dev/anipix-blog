@@ -29,7 +29,7 @@
     <a href="../about.html">About</a>
     <a href="../contact.html">Contact</a>
   </nav>
-</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../guides.html">Guides</a></p><article class="post"><h1>Anime Art Styles Explained: Cel-Shading, Digital Painting and AI Art</h1><div class="post-meta"><span class="chip">Guides</span><span>22 September 2026</span><i></i><span>5 min read</span></div><div class="posthero"><img src="../assets/img/anime-art-styles-explained-cover.jpg" alt="anime art styles explained cover" loading="lazy"></div><p>This guide explains the main art styles you will see in anime wallpapers, namely cel-shading, digital painting, watercolour and AI-generated work, and how to tell them apart. It also looks at which styles survive best as a phone wallpaper once they are cropped, scaled and viewed behind icons. By the end you will be able to name the style of almost any image you find.</p>
+</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../guides.html">Guides</a></p><article class="post"><h1>Anime Art Styles Explained: Cel-Shading, Digital Painting and AI Art</h1><div class="post-meta"><span class="chip">Guides</span><span>22 September 2026</span><i></i><span>5 min read</span></div><div class="sharebar"><span class="sharelabel">Share</span><button class="sbtn" type="button" onclick="sharePost()">Share this article</button><button class="sbtn" type="button" onclick="copyLink()">Copy link</button></div><div class="posthero"><img src="../assets/img/anime-art-styles-explained-cover.jpg" alt="anime art styles explained cover" loading="lazy"></div><p>This guide explains the main art styles you will see in anime wallpapers, namely cel-shading, digital painting, watercolour and AI-generated work, and how to tell them apart. It also looks at which styles survive best as a phone wallpaper once they are cropped, scaled and viewed behind icons. By the end you will be able to name the style of almost any image you find.</p>
 
 <h2>Cel-shading</h2>
 <p>Cel-shading imitates traditional animation cels. Colour is applied in flat blocks with hard, clean edges between light and shadow, and a bold outline defines the character. There is little or no soft blending, so a shadow on the cheek is a distinct shape rather than a gradient. Cel-shaded art reads instantly and stays legible even when small, which is why it is the backbone of anime visuals.</p>
@@ -121,5 +121,20 @@
   <div class="bottom">&copy; <span id="yr"></span> AniPix Blog. All artwork belongs to its original creators.
   This site is not affiliated with any studio, publisher or game developer.</div>
 </div></footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script></body>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script><div id="shareToast"></div>
+<script>
+function shareToast(m){var t=document.getElementById('shareToast');if(!t)return;
+ t.textContent=m;t.classList.add('on');clearTimeout(window._st);
+ window._st=setTimeout(function(){t.classList.remove('on');},2200);}
+function sharePost(t,u){t=t||document.title;u=u||location.href;
+ if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+function copyLink(u){u=u||location.href;
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+</script>
+</body>
 </html>

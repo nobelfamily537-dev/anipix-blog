@@ -29,7 +29,7 @@
     <a href="../about.html">About</a>
     <a href="../contact.html">Contact</a>
   </nav>
-</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../guides.html">Guides</a></p><article class="post"><h1>How to Crop and Optimise an Anime Wallpaper Without Ruining It</h1><div class="post-meta"><span class="chip">Guides</span><span>11 September 2026</span><i></i><span>5 min read</span></div><div class="posthero"><img src="../assets/img/how-to-crop-anime-wallpaper-cover.jpg" alt="how to crop anime wallpaper cover" loading="lazy"></div><p>This guide covers the practical rules for cropping an anime image into a phone wallpaper without cutting off the parts that matter. It explains where to place a character's face, how much headroom to leave, which details to protect, and how to deal with watermarks and text. It finishes with the export settings that keep an image sharp after the phone resizes it.</p>
+</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../guides.html">Guides</a></p><article class="post"><h1>How to Crop and Optimise an Anime Wallpaper Without Ruining It</h1><div class="post-meta"><span class="chip">Guides</span><span>11 September 2026</span><i></i><span>5 min read</span></div><div class="sharebar"><span class="sharelabel">Share</span><button class="sbtn" type="button" onclick="sharePost()">Share this article</button><button class="sbtn" type="button" onclick="copyLink()">Copy link</button></div><div class="posthero"><img src="../assets/img/how-to-crop-anime-wallpaper-cover.jpg" alt="how to crop anime wallpaper cover" loading="lazy"></div><p>This guide covers the practical rules for cropping an anime image into a phone wallpaper without cutting off the parts that matter. It explains where to place a character's face, how much headroom to leave, which details to protect, and how to deal with watermarks and text. It finishes with the export settings that keep an image sharp after the phone resizes it.</p>
 
 <h2>Start from the best source you can find</h2>
 <p>Cropping cannot add detail. If you start from a small or heavily compressed image, no amount of careful cropping will make it sharp. Before you open any editor, find the largest clean version available, ideally at least 2000 pixels on the long edge. Check the file size as a rough guide: a clean image 2000 pixels tall is usually 800 KB or more. If the only version you have is small, accept a softer result or look for another source.</p>
@@ -114,5 +114,20 @@
   <div class="bottom">&copy; <span id="yr"></span> AniPix Blog. All artwork belongs to its original creators.
   This site is not affiliated with any studio, publisher or game developer.</div>
 </div></footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script></body>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script><div id="shareToast"></div>
+<script>
+function shareToast(m){var t=document.getElementById('shareToast');if(!t)return;
+ t.textContent=m;t.classList.add('on');clearTimeout(window._st);
+ window._st=setTimeout(function(){t.classList.remove('on');},2200);}
+function sharePost(t,u){t=t||document.title;u=u||location.href;
+ if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+function copyLink(u){u=u||location.href;
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+</script>
+</body>
 </html>

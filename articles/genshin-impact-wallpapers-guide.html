@@ -29,7 +29,7 @@
     <a href="../about.html">About</a>
     <a href="../contact.html">Contact</a>
   </nav>
-</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../games.html">Games</a></p><article class="post"><h1>Genshin Impact Wallpapers: Best Characters for Your Home Screen</h1><div class="post-meta"><span class="chip">Games</span><span>15 August 2026</span><i></i><span>7 min read</span></div><div class="posthero"><img src="../assets/img/genshin-impact-wallpapers-guide-cover.jpg" alt="genshin impact wallpapers guide cover" loading="lazy"></div><p>Genshin Impact has one of the most consistent art styles in gaming, and its elemental system gives every character a built-in colour theme you can build a home screen around. This guide works through Raiden Shogun, Nahida, Furina, Zhongli and Hu Tao, explaining the palette each one carries and how those colours behave behind icons and widgets. It also covers the practical difference between official splash art and fan art, so you know which to reach for when you want a wallpaper that actually fits a phone.</p>
+</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../games.html">Games</a></p><article class="post"><h1>Genshin Impact Wallpapers: Best Characters for Your Home Screen</h1><div class="post-meta"><span class="chip">Games</span><span>15 August 2026</span><i></i><span>7 min read</span></div><div class="sharebar"><span class="sharelabel">Share</span><button class="sbtn" type="button" onclick="sharePost()">Share this article</button><button class="sbtn" type="button" onclick="copyLink()">Copy link</button></div><div class="posthero"><img src="../assets/img/genshin-impact-wallpapers-guide-cover.jpg" alt="genshin impact wallpapers guide cover" loading="lazy"></div><p>Genshin Impact has one of the most consistent art styles in gaming, and its elemental system gives every character a built-in colour theme you can build a home screen around. This guide works through Raiden Shogun, Nahida, Furina, Zhongli and Hu Tao, explaining the palette each one carries and how those colours behave behind icons and widgets. It also covers the practical difference between official splash art and fan art, so you know which to reach for when you want a wallpaper that actually fits a phone.</p>
 
 <h2>Why elemental colour matters for a wallpaper</h2>
 <p>Every character in Genshin belongs to one of seven elements, and each element has an established visual identity: Electro runs purple and violet, Dendro runs green, Hydro runs blue, Pyro runs red and orange, Geo runs amber and gold, Anemo runs teal and mint, and Cryo runs pale blue and white. Because the game's designers keep those colours consistent across a character's hair, clothing, abilities and effects, a single character usually supplies you with a coherent palette rather than a random mix.</p>
@@ -120,5 +120,20 @@
   <div class="bottom">&copy; <span id="yr"></span> AniPix Blog. All artwork belongs to its original creators.
   This site is not affiliated with any studio, publisher or game developer.</div>
 </div></footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script></body>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script><div id="shareToast"></div>
+<script>
+function shareToast(m){var t=document.getElementById('shareToast');if(!t)return;
+ t.textContent=m;t.classList.add('on');clearTimeout(window._st);
+ window._st=setTimeout(function(){t.classList.remove('on');},2200);}
+function sharePost(t,u){t=t||document.title;u=u||location.href;
+ if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+function copyLink(u){u=u||location.href;
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+</script>
+</body>
 </html>

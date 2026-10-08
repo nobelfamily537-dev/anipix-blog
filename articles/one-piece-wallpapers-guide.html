@@ -29,7 +29,7 @@
     <a href="../about.html">About</a>
     <a href="../contact.html">Contact</a>
   </nav>
-</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../anime.html">Anime</a></p><article class="post"><h1>One Piece Wallpapers: Ranking the Straw Hats by Art Quality</h1><div class="post-meta"><span class="chip">Anime</span><span>3 October 2026</span><i></i><span>7 min read</span></div><div class="posthero"><img src="../assets/img/one-piece-wallpapers-guide-cover.jpg" alt="one piece wallpapers guide cover" loading="lazy"></div><p>One Piece has been running long enough that its artwork has passed through several distinct looks, and that range is exactly what makes it such a rich source of phone wallpapers. This guide ranks the main Straw Hats by how well their art works on a portrait phone screen, covering Luffy (including Gear 5), Zoro, Sanji, Nami, Robin and Brook. You will get specific notes on colour palettes, linework and cropping, so you can choose a background that still looks good once a clock, a widget and a row of icons are sitting on top of it.</p>
+</div></header><main class="narrow"><p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../anime.html">Anime</a></p><article class="post"><h1>One Piece Wallpapers: Ranking the Straw Hats by Art Quality</h1><div class="post-meta"><span class="chip">Anime</span><span>3 October 2026</span><i></i><span>7 min read</span></div><div class="sharebar"><span class="sharelabel">Share</span><button class="sbtn" type="button" onclick="sharePost()">Share this article</button><button class="sbtn" type="button" onclick="copyLink()">Copy link</button></div><div class="posthero"><img src="../assets/img/one-piece-wallpapers-guide-cover.jpg" alt="one piece wallpapers guide cover" loading="lazy"></div><p>One Piece has been running long enough that its artwork has passed through several distinct looks, and that range is exactly what makes it such a rich source of phone wallpapers. This guide ranks the main Straw Hats by how well their art works on a portrait phone screen, covering Luffy (including Gear 5), Zoro, Sanji, Nami, Robin and Brook. You will get specific notes on colour palettes, linework and cropping, so you can choose a background that still looks good once a clock, a widget and a row of icons are sitting on top of it.</p>
 
 <h2>Why One Piece wallpapers are harder than they look</h2>
 <p>Most One Piece art you will find online was never made to be a phone background. Key visuals, film posters and manga colour spreads are usually landscape, while a modern phone is a tall rectangle. When you drop a wide image onto a tall screen, something has to give: either the character shrinks into the middle with dead space above and below, or you crop in and lose whatever made the picture interesting.</p>
@@ -117,5 +117,20 @@
   <div class="bottom">&copy; <span id="yr"></span> AniPix Blog. All artwork belongs to its original creators.
   This site is not affiliated with any studio, publisher or game developer.</div>
 </div></footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script></body>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script><div id="shareToast"></div>
+<script>
+function shareToast(m){var t=document.getElementById('shareToast');if(!t)return;
+ t.textContent=m;t.classList.add('on');clearTimeout(window._st);
+ window._st=setTimeout(function(){t.classList.remove('on');},2200);}
+function sharePost(t,u){t=t||document.title;u=u||location.href;
+ if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+function copyLink(u){u=u||location.href;
+ if(navigator.clipboard){navigator.clipboard.writeText(u)
+   .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
+ prompt('Copy this link:',u);}
+</script>
+</body>
 </html>
