@@ -15,14 +15,7 @@
 <link rel="stylesheet" href="assets/style.css">
 
 <link rel="icon" href="assets/favicon.png">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KCCJD6YDZV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KCCJD6YDZV');
-</script>
+
 </head>
 <body>
 <header class="site"><div class="wrap">
@@ -111,6 +104,14 @@ function copyLink(u){u=u||location.href;
  if(navigator.clipboard){navigator.clipboard.writeText(u)
    .then(function(){shareToast('Link copied');}).catch(function(){prompt('Copy this link:',u);});return;}
  prompt('Copy this link:',u);}
+</script>
+<!-- Google tag (gtag.js) - loaded last so it never delays the first paint -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KCCJD6YDZV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KCCJD6YDZV');
 </script>
 </body>
 </html>
