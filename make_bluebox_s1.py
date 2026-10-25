@@ -12,14 +12,14 @@ DESC = ("Every episode of Blue Box Season 1 explained - all 25 episodes of Ao no
 DATE = "25 October 2026"
 READ = "48 min read"
 CAT = "Anime"
-HERO = "bluebox-s1-hero.webp"
+HERO = "bluebox-s1-keyart.webp"
 IMGA = "bluebox-s1-a.webp"
 IMGB = "bluebox-s1-b.webp"
 NEXT_SLUG = "blue-box-season-2-complete-episode-guide"
 NEXT_LABEL = "Blue Box Season 2: Complete Episode Guide"
 
-def fig(name, cap):
-    return (f'<figure style="max-width:760px;margin:34px auto">'
+def fig(name, cap, w=760):
+    return (f'<figure style="max-width:{w}px;margin:34px auto">'
             f'<img src="../assets/img/{name}" alt="" loading="lazy" decoding="async">'
             f'<figcaption style="text-align:center">{cap}</figcaption></figure>')
 
@@ -31,10 +31,12 @@ for n, en, jp, date, *paras in EPS:
     for p in paras:
         block.append(f'<p>{p}</p>')
     rows.append("\n".join(block))
-    if n == 8:
-        rows.append(fig(IMGA, "Blue Box Season 1 &mdash; Taiki and Chinatsu, episode by episode."))
+    if n == 5:
+        rows.append(fig("bluebox-s1-chinatsu.webp", "Blue Box Season 1 &mdash; the aquarium arc.", 640))
+    if n == 12:
+        rows.append(fig("bluebox-s1-trio.webp", "Taiki, Hina and Chinatsu &mdash; Season 1's central trio.", 660))
     if n == 18:
-        rows.append(fig(IMGB, "The first season builds a slow, careful romance around two athletes."))
+        rows.append(fig("bluebox-s1-manga.webp", "Blue Box &mdash; the manga by Kouji Miura.", 640))
 
 BODY = f"""<article class="post"><h1>{TITLE}</h1>
 <div class="post-meta"><span class="chip">{CAT}</span><span>{DATE}</span><i></i><span>{READ}</span></div>
