@@ -9,7 +9,7 @@ DESC = ("A quick, spoiler-light overview of Blue Box - what the show is, how Sea
 DATE = "25 October 2026"
 READ = "5 min read"
 CAT = "Anime"
-HERO = "bluebox-hero.webp"
+HERO = "bluebox-s1-trio.webp"
 
 BODY = f"""<article class="post"><h1>{TITLE}</h1>
 <div class="post-meta"><span class="chip">{CAT}</span><span>{DATE}</span><i></i><span>{READ}</span></div>

@@ -106,7 +106,6 @@ BODY = f"""<article class="post"><h1>{TITLE}</h1>
 <p><strong>Score: 9/10.</strong> Blue Box is one of the best romance anime of the decade, and the first season is a near-perfect introduction to it. The animation is understated and consistent, the writing trusts its audience, and the sports are treated with enough respect that the badminton and basketball matches actually carry emotional weight rather than functioning as filler between romantic beats.</p>
 <p>Its only real flaw is pacing. The first cours moves deliberately, and viewers who want the relationship to progress faster will find the middle stretch slow. That patience is the point, though, and it pays off in the finale. If you stick with it, Season 1 rewards you with one of the most earned confessions in recent anime.</p>
 
-{fig(IMGA, "Blue Box Season 1 &mdash; a romance built on small, careful moments.")}
 
 <div class="next" style="margin-top:34px"><h3>Next in this series</h3>
 <p style="color:#8a8aa3;font-size:15px;margin:0 0 14px">Continue with Season 2, or read the short overview of both seasons.</p>

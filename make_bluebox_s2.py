@@ -152,13 +152,11 @@ BODY = f"""<article class="post"><h1>{TITLE}</h1>
 <p><strong>Is Season 2 on Netflix?</strong> Yes, worldwide, with episodes arriving shortly after the Japanese broadcast on Sundays.</p>
 <p><strong>Is Blue Box Season 2 the final season?</strong> Not announced as such. The manga continues well past this point, so there is plenty of source material left.</p>
 
-{fig(IMGB, "Yumeka Kido &mdash; the rival from Chinatsu's past who changes everything.")}
 
 <h2>Season 2 verdict so far</h2>
 <p><strong>Score so far: 8.5/10.</strong> Three episodes in, Season 2 has done the hardest thing a second season can do: it has changed the shape of the story without breaking it. The studio change is invisible where it matters, the new characters are genuinely interesting rather than obstacles, and the Yumeka arc is the most emotionally sophisticated material Blue Box has attempted.</p>
 <p>The one thing to watch is pacing. Twelve episodes is a tight runway for the Winter Cup, the Yumeka arc and the Matsuoka thread, and there is a real risk that the season has to rush one of them. So far it has managed its time well. This page will be updated as the season continues.</p>
 
-{fig(IMGA, "Blue Box Season 2 &mdash; airing now on TBS and Netflix.")}
 
 <div class="next" style="margin-top:34px"><h3>Read next</h3>
 <p style="color:#8a8aa3;font-size:15px;margin:0 0 14px">Catch up on Season 1, or read the short overview of both seasons.</p>
