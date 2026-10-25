@@ -59,7 +59,7 @@ head = head.replace("fall-2026-anime-watch-list-cover.webp", f"{SLUG}-cover.webp
 shell_start = tpl.find('<header class="site">')
 shell_end = tpl.find('<article class="post">')
 shell_head = tpl[shell_start:shell_end]
-tail = tpl[tpl.find("</article>"):]
+tail = re.sub(r'</article><div class="related">.*?</div>', '', tpl[tpl.find("</article>"):], count=1, flags=re.S)
 shell_head = shell_head.replace('<a href="../news.html">News</a></p>', '<a href="../anime.html">Anime</a></p>')
 
 BODY = f"""<article class="post"><h1>The Apothecary Diaries Season 3: Review, Release Schedule and Where to Watch</h1>

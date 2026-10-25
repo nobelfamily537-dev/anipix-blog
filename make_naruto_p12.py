@@ -155,7 +155,7 @@ head = head.replace("https://blog.anipix.me/articles/fall-2026-anime-watch-list.
 head = head.replace("fall-2026-anime-watch-list-cover.webp", IMG1)
 shell = tpl[tpl.find('<header class="site">'):tpl.find('<article class="post">')]
 shell = shell.replace('<a href="../news.html">News</a></p>', '<a href="../anime.html">Anime</a></p>')
-tail = tpl[tpl.find("</article>"):]
+tail = re.sub(r'</article><div class="related">.*?</div>', '', tpl[tpl.find("</article>"):], count=1, flags=re.S)
 open(f"articles/{SLUG}.html", "w", encoding="utf-8").write(head + shell + BODY + tail)
 print("part 12 written")
 

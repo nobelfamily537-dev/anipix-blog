@@ -170,7 +170,7 @@ head = head.replace("https://blog.anipix.me/articles/fall-2026-anime-watch-list.
 head = head.replace("fall-2026-anime-watch-list-cover.webp", HERO)
 shell = tpl[tpl.find('<header class="site">'):tpl.find('<article class="post">')]
 shell = shell.replace('<a href="../news.html">News</a></p>', '<a href="../anime.html">Anime</a></p>')
-tail = tpl[tpl.find("</article>"):]
+tail = re.sub(r'</article><div class="related">.*?</div>', '', tpl[tpl.find("</article>"):], count=1, flags=re.S)
 open(f"articles/{SLUG}.html", "w", encoding="utf-8").write(head + shell + BODY + tail)
 
 CARD = (f'<div class="card"><div class="thumb"><img src="assets/img/{HERO}" alt="" loading="lazy" decoding="async"></div>'
