@@ -33,6 +33,8 @@ BODY = f"""<article class="post"><h1>{TITLE}</h1>
 <p>What has changed is where the conflict sits. Season 2 pushes it outward with two new characters who say the quiet parts out loud: <strong>Yumeka Kido</strong>, a former teammate of Chinatsu's who quit the sport and cannot stand watching her keep going, and <strong>Kazuma Matsuoka</strong>, a confident player back from America who tells Taiki he has no business pursuing Chinatsu.</p>
 <p>The season is built around the <strong>Winter Cup</strong>, Chinatsu's last realistic shot at a national tournament before graduating.</p>
 
+<figure style="max-width:820px;margin:30px auto"><img src="../assets/img/bluebox-s2-keyart.webp" alt="" loading="lazy" decoding="async"><figcaption style="text-align:center">Blue Box Season 2 &mdash; airing now on TBS and Netflix.</figcaption></figure>
+
 <h2>How the two seasons differ</h2>
 <p>Season 1 is the slow burn: two people becoming worthy of each other, with almost all the drama unspoken. Season 2 keeps the same careful writing but aims it outward &mdash; characters argue, the sports get more room, and the relationship stops being a secret. It is what happens after the burn catches.</p>
 

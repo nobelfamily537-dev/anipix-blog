@@ -14,14 +14,14 @@ DESC = ("Everything about Blue Box Season 2 - the new studio, the new characters
 DATE = "25 October 2026"
 READ = "38 min read"
 CAT = "Anime"
-HERO = "bluebox-s2-hero.webp"
+HERO = "bluebox-s2-banner.webp"
 IMGA = "bluebox-s2-a.webp"
 IMGB = "bluebox-s2-b.webp"
 PREV_SLUG = "blue-box-season-1-complete-episode-guide"
 PREV_LABEL = "Blue Box Season 1: Complete Episode Guide"
 
-def fig(name, cap):
-    return (f'<figure style="max-width:760px;margin:34px auto">'
+def fig(name, cap, w=760):
+    return (f'<figure style="max-width:{w}px;margin:34px auto">'
             f'<img src="../assets/img/{name}" alt="" loading="lazy" decoding="async">'
             f'<figcaption style="text-align:center">{cap}</figcaption></figure>')
 
@@ -57,8 +57,10 @@ for n, en, jp, date, paras in EPISODES:
     rows.append(f'<p class="epmeta" style="color:#8a8aa3;font-size:13px;margin:-4px 0 12px"><em>{jp}</em> &middot; {date}</p>')
     for p in paras:
         rows.append(f'<p>{p}</p>')
-    if n == 2:
-        rows.append(fig(IMGA, "Blue Box Season 2 &mdash; the Winter Cup arc begins."))
+    if n == 1:
+        rows.append(fig("bluebox-s2-netflix.webp", "Blue Box Season 2 is streaming now on Netflix.", 540))
+    if n == 3:
+        rows.append(fig("bluebox-s2-snowglobe.webp", "Blue Box Season 2 &mdash; the winter training arc."))
 
 SCHEDULE = [
 ("1", "Déjà Vu", "4 October 2026", True), ("2", "Admiration", "11 October 2026", True),
@@ -126,6 +128,8 @@ BODY = f"""<article class="post"><h1>{TITLE}</h1>
 <p>Season 2 continues the adaptation of Kouji Miura's <em>Blue Box</em> manga, picking up from where the first season's twenty-five episodes ended. The arc it is built around is the one the first season spent its second half pointing at: the <strong>Winter Cup</strong>, and the return of Yumeka Kido into Chinatsu's life.</p>
 <p>The Winter Cup matters because it is the first major tournament Chinatsu faces as a third-year, which means it is the last one she can realistically reach before graduating. Season 1 established that basketball is not a hobby for her; it is the thing she has organised her entire life around. Season 2 takes that established fact and puts pressure on it from two directions at once. The tournament itself raises the stakes of every practice. And Yumeka, who quit the sport, forces Chinatsu to defend her choice to keep going.</p>
 <p>The Yumeka arc is the season's spine. What makes it work is that it is not a rivalry in the sports-anime sense. Yumeka is not better than Chinatsu, and the show is not interested in who would win a one-on-one. She is the person who showed Chinatsu what excellence looked like, and then walked away from it, and her hostility is really grief. Blue Box has always been strongest when it treats its characters' failures with respect, and this is the most sustained example of it in the series so far.</p>
+
+{fig("bluebox-s2-manga.webp", "Blue Box &mdash; Kouji Miura's manga, which Season 2 continues to adapt.", 540)}
 
 <h2>How Season 2 is different from Season 1</h2>
 <p>The first season was about two people trying to become worthy of each other, and almost all of its tension was internal. Taiki hid his feelings out of respect. Chinatsu treated hers as a complication to be managed. The whole thing ran on careful silences and small gestures, and it worked because the show trusted the audience to read a scarf or a bracelet correctly.</p>
