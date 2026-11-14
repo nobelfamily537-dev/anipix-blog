@@ -1,0 +1,32 @@
+name: Submit to IndexNow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "Specific URLs to submit (space separated). Blank = whole sitemap."
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Submit URLs
+        env:
+          EXTRA_URLS: ${{ inputs.urls }}
+        run: |
+          if [ -n "$EXTRA_URLS" ]; then
+            python scripts/indexnow.py $EXTRA_URLS
+          else
+            python scripts/indexnow.py
+          fi
